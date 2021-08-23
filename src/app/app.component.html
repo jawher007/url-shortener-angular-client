@@ -1,20 +1,46 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to Url Shortener!
-  </h1>
-</div>
+<!-- The content below is only a placeholder and can be replaced.
+<div style="text-align: center"></div>
 
 <div class="wrap">
-  <div class="send">
-     <input #urlInput class="sendTerm" placeholder="Paste a link to shorten it">
-     <button (click)="add(urlInput.value);" class="sendButton">
-       Send
-    </button>
-  </div>
+   <div class="send">
+    <input
+      #urlInput
+      class="sendTerm"
+      placeholder="Paste a link to shorten it"
+    />
+  </div> -->
+
+<!-- <form class="example-form" (submit)="add()">
+    <div class="form-group">
+      <textarea
+        type="text"
+        class="sendTerm"
+        id="url"
+        required
+        [(ngModel)]="url.url"
+        name="url"
+        aria-required="true"
+      ></textarea>
+    </div>
+    <button type="submit" class="sendButton">Send</button>
+  </form>
+
   <div style="margin-top: 50px">
-    <label>{{shortenUrl}}</label>
+    <label>{{ shortenUrl }}</label>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<button id="aze" (click)="showResponse()">show</button>
+
+<!-- <div *ngFor="let l of objectKeys(groubedByTeam)">
+  <div *ngFor="let be of l">
+    {{ be.team }}//{{ be.manager }}//{{ be.field3 }}
+  </div>
+</div> -->
+
+<div *ngFor="let l of groubedByTeam | keyvalue">
+  <div *ngFor="let be of l.value">
+    {{ be.team }}//{{ be.manager }}//{{ be.field3 }}
+  </div>
+</div>

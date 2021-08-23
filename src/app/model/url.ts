@@ -1,6 +1,4 @@
 export interface Url {
-    
-    id: string;
-    url: string;
-
+  id?: string;
+  url: string;
 }
